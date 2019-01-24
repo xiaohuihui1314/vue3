@@ -1,6 +1,6 @@
 <template>
   <div>
-    <keep-alive :include="list" :a="key">
+    <keep-alive :include="list">
       <router-view>
         <!-- 这里是会被缓存的视图组件，比如 Home！ -->
       </router-view>
@@ -21,9 +21,8 @@
         return this.$route.fullPath
       },
       list () {
-        const list = window.list = '' || ['home'];
-        console.log(list)
-        return list
+        console.log(this.$store.state.home.menuListCache)
+        return this.$store.state.home.menuListCache
       }
     },
     mounted () {

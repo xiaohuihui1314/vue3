@@ -2,7 +2,9 @@
   <div>
     home
     <input type="text">
+    <button @click="add">添加缓存</button>
     <button @click="clear">清除</button>
+
   </div>
 </template>
 
@@ -13,9 +15,12 @@
       console.log(1);
     },
     methods:{
+      add(){
+        this.$store.dispatch('addMenuCache', 'home');
+      },
       clear(){
-        window.list = ['view1'];
-      }
+        this.$store.dispatch('deleteMenuCache', 'home');
+      },
     }
   }
 </script>
