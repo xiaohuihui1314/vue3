@@ -1,5 +1,5 @@
 const state = {
-  menuListCache: ['home']
+  menuListCache: []
 };
 // getters
 const getters = {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content-wrap">
     <keep-alive :include="list">
       <router-view>
         <!-- 这里是会被缓存的视图组件，比如 Home！ -->
@@ -30,6 +30,8 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .content-wrap {
+    margin-left: 300px;
+  }
 </style>
